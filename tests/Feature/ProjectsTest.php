@@ -21,10 +21,13 @@ class ProjectsTest extends TestCase
             'description' => $this->faker->paragraph
         ];
 
+        // Stores the project into the DB ( creates a table) Passes
         $this->post('/projects',$attributes);
 
+        // Checks if the DB has table projects Passes
         $this->assertDatabaseHas('projects',$attributes);
 
+        // Obtains all the projects from the DB Passes
         $this->get('/projects')->assertSee($attributes['title']);
     }
 }
