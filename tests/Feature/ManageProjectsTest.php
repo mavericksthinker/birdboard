@@ -6,7 +6,7 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ProjectsTest extends TestCase
+class ManageProjectsTest extends TestCase
 {
     use WithFaker,RefreshDatabase;
     /**
@@ -17,6 +17,8 @@ class ProjectsTest extends TestCase
     public function test_a_user_can_create_project(){
 
         $this->actingAs(factory('App\User')->create());
+
+        $this->get('/projects/create')->assertStatus(200);
 
         $attributes = [
             'title' => $this->faker->sentence,
@@ -92,29 +94,34 @@ class ProjectsTest extends TestCase
     }
 
     // Test to see if the post request has a description Passes
-    public function test_guest_cannot_create_a_projects(){
-
-        $attributes = factory('App\Project')->raw();
-
-        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
-        $this->post('/projects',$attributes)->assertRedirect('login');
-
-    }
-
-    // Test to see if the post request has a description Passes
-    public function test_guest_may_not_view_projects(){
-
-        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
-        $this->get('/projects')->assertRedirect('login');
-
-    }
-
-    public function test_guest_cannot_view_a_single_project(){
+    public function test_guest_cannot_manage_projects(){
 
         $project = factory('App\Project')->create();
 
+        //$attributes = factory('App\Project')->raw();
+
         // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+        $this->get('/projects')->assertRedirect('login');
+        $this->post('/projects',$project->toArray())->assertRedirect('login');
         $this->get($project->path())->assertRedirect('login');
 
     }
+
+//    // Test to see if the post request has a description Passes
+//    public function test_guest_may_not_view_projects(){
+//
+//        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+//        //$this->get('/projects')->assertRedirect('login');
+//
+//    }
+//
+//    // Test to check a guest user cannot view any project
+//    public function test_guest_cannot_view_a_single_project(){
+//
+//        //$project = factory('App\Project')->create();
+//
+//        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+//        //$this->get($project->path())->assertRedirect('login');
+//
+//    }
 }

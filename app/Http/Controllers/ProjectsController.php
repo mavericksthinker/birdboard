@@ -22,9 +22,16 @@ class ProjectsController extends Controller
 
     }
 
+    /**
+     * Function utilized to create a project
+     */
+    public function create(){
+
+    }
+
     /*
      * Creates a project and stores it in the database
-     * @return redirect
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(){
 
