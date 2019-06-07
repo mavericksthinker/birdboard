@@ -58,7 +58,7 @@ class ProjectsController extends Controller
 //        $project =Project::findOrFail(request('project'));
 
         // Forbidden to access the projects not related to the owner
-        if(auth()->id() != $project->owner_id){
+        if(auth()->user()->isNot($project->owner)){
             abort(403);
         }
 
