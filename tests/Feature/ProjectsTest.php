@@ -30,4 +30,20 @@ class ProjectsTest extends TestCase
         // Obtains all the projects from the DB Passes
         $this->get('/projects')->assertSee($attributes['title']);
     }
+
+    // Test to see if the post request has a title
+    public function test_a_project_require_a_title(){
+
+        $this->withExceptionHandling();
+
+        $this->post('/projects',[])->assertSessionHasErrors('title');
+
+    }
+
+    // Test to see if the post request has a description
+    public function test_a_project_require_a_description(){
+
+        $this->post('/projects',[])->assertSessionHasErrors('description');
+
+    }
 }

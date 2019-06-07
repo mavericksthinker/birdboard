@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f10b28-793b-4679-afd1-0e46be25da4f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="537">
+              <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
               <folding>
                 <element signature="e#33#52#0#PHP" expanded="true" />
               </folding>
@@ -43,8 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            <state relative-caret-position="375">
+              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -248,9 +249,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProjectTest">
+  <component name="RunManager" selected="PHPUnit.ProjectsTest.test_a_project_require_a_title">
     <configuration name="ProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectsTest.test_a_project_require_a_description" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ProjectsTest" file="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" method="test_a_project_require_a_description" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ProjectsTest.test_a_project_require_a_title" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ProjectsTest" file="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" method="test_a_project_require_a_title" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="ProjectsTest.test_a_user_can_create_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -265,9 +274,13 @@
       <item itemvalue="PHPUnit.phpunit.xml" />
       <item itemvalue="PHPUnit.ProjectTest" />
       <item itemvalue="PHPUnit.ProjectsTest.test_a_user_can_create_project" />
+      <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_description" />
+      <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_title" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_title" />
+        <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_description" />
         <item itemvalue="PHPUnit.ProjectsTest.test_a_user_can_create_project" />
       </list>
     </recent_temporary>
@@ -282,20 +295,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559879606733</updated>
-      <workItem from="1559879608900" duration="2568000" />
+      <workItem from="1559879608900" duration="3131000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectsTest - 2019.06.07 at 11h 03m 39s.xml">
-      <configuration name="ProjectsTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 11h 13m 16s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 11h 14m 36s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="ProjectTest - 2019.06.07 at 11h 47m 20s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -317,9 +321,18 @@
     <history-entry file="ProjectTest - 2019.06.07 at 11h 54m 58s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="ProjectTest - 2019.06.07 at 12h 02m 22s.xml">
+      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTest - 2019.06.07 at 12h 03m 06s.xml">
+      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTest - 2019.06.07 at 12h 03m 12s.xml">
+      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2568000" />
+    <option name="totallyTimeSpent" value="3131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
@@ -392,16 +405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -412,10 +415,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="537">
+          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
           <folding>
             <element signature="e#33#52#0#PHP" expanded="true" />
           </folding>
