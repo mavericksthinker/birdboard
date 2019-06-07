@@ -18,7 +18,8 @@ class ProjectsTest extends TestCase
     {
         $attributes = [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph
+            'description' => $this->faker->paragraph,
+            'owner_id' => factory('App\User')->create()->id
         ];
 
         // Stores the project into the DB ( creates a table) Passes
@@ -65,6 +66,15 @@ class ProjectsTest extends TestCase
         $attributes = factory('App\Project')->raw(['description'=>'']);
 
         $this->post('/projects',$attributes)->assertSessionHasErrors('description');
+
+    }
+
+    // Test to see if the post request has a description Passes
+    public function test_a_project_require_a_owner(){
+
+        $attributes = factory('App\Project')->raw(['owner_id'=>null]);
+
+        $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
 
     }
 }
