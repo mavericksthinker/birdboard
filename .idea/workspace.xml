@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="66f10b28-793b-4679-afd1-0e46be25da4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +29,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="926">
-              <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+            <state relative-caret-position="240">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#33#52#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/UserTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+              <folding>
+                <element signature="e#30#74#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="41" column="120" selection-start-line="41" selection-start-column="120" selection-end-line="41" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -54,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+              <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -88,9 +109,11 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_06_07_040727_create_projects_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/factories/ProjectFactory.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
       </list>
     </option>
   </component>
@@ -243,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProjectTest">
+  <component name="RunManager" selected="PHPUnit.UserTest.test_user_has_project">
     <configuration name="ProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -260,6 +283,10 @@
       <TestRunner class="Tests\Feature\ProjectsTest" file="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" method="test_a_user_can_create_project" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="UserTest.test_user_has_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\UserTest" file="$PROJECT_DIR$/tests/Unit/UserTest.php" method="test_user_has_project" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -270,9 +297,11 @@
       <item itemvalue="PHPUnit.ProjectsTest.test_a_user_can_create_project" />
       <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_description" />
       <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_title" />
+      <item itemvalue="PHPUnit.UserTest.test_user_has_project" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.UserTest.test_user_has_project" />
         <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_title" />
         <item itemvalue="PHPUnit.ProjectsTest.test_a_project_require_a_description" />
         <item itemvalue="PHPUnit.ProjectsTest.test_a_user_can_create_project" />
@@ -289,44 +318,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559879606733</updated>
-      <workItem from="1559879608900" duration="8593000" />
+      <workItem from="1559879608900" duration="9322000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 22m 21s.xml">
+    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 38m 00s.xml">
       <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 22m 50s.xml">
+    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 38m 13s.xml">
       <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 23m 10s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 24m 21s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 27m 11s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 14h 27m 20s.xml">
+    <history-entry file="ProjectTest - 2019.06.07 at 14h 38m 15s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 14h 33m 27s.xml">
+    <history-entry file="ProjectTest - 2019.06.07 at 14h 40m 42s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 33m 59s.xml">
+    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 41m 33s.xml">
       <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 34m 09s.xml">
+    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 41m 44s.xml">
       <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_project_require_a_description - 2019.06.07 at 14h 35m 56s.xml">
-      <configuration name="ProjectsTest.test_a_project_require_a_description" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest_test_user_has_project - 2019.06.07 at 14h 44m 05s.xml">
+      <configuration name="UserTest.test_user_has_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="UserTest_test_user_has_project - 2019.06.07 at 14h 46m 13s.xml">
+      <configuration name="UserTest.test_user_has_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="UserTest_test_user_has_project - 2019.06.07 at 14h 46m 29s.xml">
+      <configuration name="UserTest.test_user_has_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="UserTest_test_user_has_project - 2019.06.07 at 14h 47m 58s.xml">
+      <configuration name="UserTest.test_user_has_project" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8593000" />
+    <option name="totallyTimeSpent" value="9322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
@@ -342,8 +371,8 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -355,17 +384,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php</url>
-          <line>16</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env">
@@ -436,16 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -463,13 +471,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="926">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#33#52#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/UserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="64" lean-forward="true" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+          <folding>
+            <element signature="e#30#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="41" column="120" selection-start-line="41" selection-start-column="120" selection-end-line="41" selection-end-column="120" />
         </state>
       </provider>
     </entry>

@@ -35,8 +35,11 @@ class ProjectsController extends Controller
         ]);
         // Creates a project with a post request to projects
         //Project::create(request(['title','description'])
-        $attributes['owner_id'] = Auth()->id();
-          Project::create($attributes);
+        //$attributes['owner_id'] = Auth()->id();
+
+        auth()->user()->projects()->create($attributes);
+
+        //Project::create($attributes);
 
         // then it will redirect to the projects with a get request to obtain all the list of the project
         return redirect('/projects');
