@@ -31,19 +31,27 @@ class ProjectsTest extends TestCase
         $this->get('/projects')->assertSee($attributes['title']);
     }
 
-    // Test to see if the post request has a title
+    // Test to see if the post request has a title Passes
     public function test_a_project_require_a_title(){
 
-        $this->withExceptionHandling();
+        /**
+         * create : This will generate the data and store it in the database
+         * make : This will generate the data but doesnt store it in the database
+         * make : This will generate the data and store it in the database but will stored as an array
+         */
+        // Overwrite the title as shown below
+        $attributes = factory('App\Project')->raw(['title'=>'']);
 
-        $this->post('/projects',[])->assertSessionHasErrors('title');
+        $this->post('/projects',$attributes)->assertSessionHasErrors('title');
 
     }
 
-    // Test to see if the post request has a description
+    // Test to see if the post request has a description Passes
     public function test_a_project_require_a_description(){
 
-        $this->post('/projects',[])->assertSessionHasErrors('description');
+        $attributes = factory('App\Project')->raw(['description'=>'']);
+
+        $this->post('/projects',$attributes)->assertSessionHasErrors('description');
 
     }
 }

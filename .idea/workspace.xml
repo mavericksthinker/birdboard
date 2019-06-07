@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="66f10b28-793b-4679-afd1-0e46be25da4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +19,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+            <state relative-caret-position="281">
+              <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
               <folding>
                 <element signature="e#33#52#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/factories/ProjectFactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -44,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+            <state relative-caret-position="330">
+              <caret line="22" column="76" lean-forward="true" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -96,6 +104,7 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
+        <option value="$PROJECT_DIR$/database/factories/ProjectFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" />
       </list>
     </option>
@@ -249,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProjectsTest.test_a_project_require_a_title">
+  <component name="RunManager" selected="PHPUnit.ProjectTest">
     <configuration name="ProjectTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
@@ -295,44 +304,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559879606733</updated>
-      <workItem from="1559879608900" duration="3131000" />
+      <workItem from="1559879608900" duration="4058000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectTest - 2019.06.07 at 11h 47m 20s.xml">
+    <history-entry file="ProjectsTest_test_a_project_require_a_description - 2019.06.07 at 12h 12m 43s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_description" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTest - 2019.06.07 at 12h 13m 40s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 11h 47m 48s.xml">
+    <history-entry file="ProjectTest - 2019.06.07 at 12h 14m 24s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 11h 51m 23s.xml">
+    <history-entry file="ProjectTest - 2019.06.07 at 13h 19m 09s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 11h 52m 50s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ProjectsTest_test_a_project_require_a_title - 2019.06.07 at 13h 19m 44s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 11h 53m 55s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ProjectsTest_test_a_project_require_a_title - 2019.06.07 at 13h 19m 55s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 11h 54m 49s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ProjectsTest_test_a_project_require_a_title - 2019.06.07 at 13h 20m 07s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 11h 54m 58s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ProjectsTest_test_a_project_require_a_title - 2019.06.07 at 13h 20m 59s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_title" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 12h 02m 22s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="ProjectsTest_test_a_project_require_a_description - 2019.06.07 at 13h 21m 19s.xml">
+      <configuration name="ProjectsTest.test_a_project_require_a_description" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 12h 03m 06s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.07 at 12h 03m 12s.xml">
+    <history-entry file="ProjectTest - 2019.06.07 at 13h 21m 21s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3131000" />
+    <option name="totallyTimeSpent" value="4058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
@@ -344,11 +353,11 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.1745223" />
+      <window_info anchor="bottom" id="Terminal" weight="0.1745223" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,20 +424,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="887" selection-start-line="887" selection-end-line="887" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+        <state relative-caret-position="330">
+          <caret line="22" column="76" lean-forward="true" selection-start-line="22" selection-start-column="76" selection-end-line="22" selection-end-column="76" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ProjectFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+        <state relative-caret-position="281">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
           <folding>
             <element signature="e#33#52#0#PHP" expanded="true" />
           </folding>
