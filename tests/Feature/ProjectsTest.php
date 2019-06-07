@@ -22,7 +22,7 @@ class ProjectsTest extends TestCase
         ];
 
         // Stores the project into the DB ( creates a table) Passes
-        $this->post('/projects',$attributes);
+        $this->post('/projects',$attributes)->assertRedirect('/projects');
 
         // Checks if the DB has table projects Passes
         $this->assertDatabaseHas('projects',$attributes);

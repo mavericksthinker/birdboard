@@ -23,5 +23,7 @@ class ProjectsController extends Controller
         // Creates a project with a post request to projects
         Project::create(request(['title','description']));
 
+        return redirect('/projects');
+
     }
 }
