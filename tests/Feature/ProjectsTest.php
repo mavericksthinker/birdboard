@@ -14,12 +14,13 @@ class ProjectsTest extends TestCase
      *
      * @return void
      */
-    public function test_a_user_can_create_project()
-    {
+    public function test_a_user_can_create_project(){
+
+        $this->actingAs(factory('App\User')->create());
+
         $attributes = [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph,
-            'owner_id' => factory('App\User')->create()->id
+            'description' => $this->faker->paragraph
         ];
 
         // Stores the project into the DB ( creates a table) Passes
@@ -48,6 +49,9 @@ class ProjectsTest extends TestCase
     // Test to see if the post request has a title Passes
     public function test_a_project_require_a_title(){
 
+        // Performs the sign_in
+        $this->actingAs(factory('App\User')->create());
+
         /**
          * create : This will generate the data and store it in the database
          * make : This will generate the data but doesnt store it in the database
@@ -63,6 +67,9 @@ class ProjectsTest extends TestCase
     // Test to see if the post request has a description Passes
     public function test_a_project_require_a_description(){
 
+        // Performs the sign_in
+        $this->actingAs(factory('App\User')->create());
+
         $attributes = factory('App\Project')->raw(['description'=>'']);
 
         $this->post('/projects',$attributes)->assertSessionHasErrors('description');
@@ -70,11 +77,12 @@ class ProjectsTest extends TestCase
     }
 
     // Test to see if the post request has a description Passes
-    public function test_a_project_require_a_owner(){
+    public function test_only_authenticated_users_can_create_a_projects(){
 
-        $attributes = factory('App\Project')->raw(['owner_id'=>null]);
+        $attributes = factory('App\Project')->raw();
 
-        $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+        $this->post('/projects',$attributes)->assertRedirect('login');
 
     }
 }
