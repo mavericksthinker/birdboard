@@ -21,13 +21,14 @@ class ProjectsController extends Controller
     public function store(){
 
         // Validate the request parameters if it exists (can be done the way you require)
-        request()->validate([
-            'title' => 'required',
-            'description' => 'required'
-        ]);
+        $attibutes = request()->validate([
+                                   'title' => 'required',
+                                   'description' => 'required'
+                               ]);
 
         // Creates a project with a post request to projects
-        Project::create(request(['title','description']));
+//        Project::create(request(['title','description'])
+          Project::create($attibutes);
 
         return redirect('/projects');
 
