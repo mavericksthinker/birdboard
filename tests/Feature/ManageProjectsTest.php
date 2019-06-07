@@ -102,7 +102,11 @@ class ManageProjectsTest extends TestCase
 
         // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
         $this->get('/projects')->assertRedirect('login');
+
+        $this->get('/projects/create')->assertRedirect('login');
+
         $this->post('/projects',$project->toArray())->assertRedirect('login');
+
         $this->get($project->path())->assertRedirect('login');
 
     }
