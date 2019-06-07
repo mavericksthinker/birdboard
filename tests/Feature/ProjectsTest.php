@@ -31,6 +31,19 @@ class ProjectsTest extends TestCase
         $this->get('/projects')->assertSee($attributes['title']);
     }
 
+    /**
+     * Test to check if the view has the provided parameters
+     */
+    public function test_a_user_can_view_a_project(){
+
+        $project = factory('App\Project')->create();
+
+        $this->get('/projects/'.$project->id)
+            ->assertSee($project->title)
+            ->assertSee($project->description);
+
+    }
+
     // Test to see if the post request has a title Passes
     public function test_a_project_require_a_title(){
 
