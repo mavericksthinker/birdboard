@@ -15,14 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/projects', 'ProjectsController@store')->middleware('auth');
+Route::group(['middleware'=>'auth'],function(){
 
-Auth::routes();
+    Route::post('/projects', 'ProjectsController@store');
 
-Route::get('/projects', 'ProjectsController@index')->middleware('auth');
+    Route::get('/projects', 'ProjectsController@index');
 
-Route::get('/projects/{project}', 'ProjectsController@show')->middleware('auth');
+    Route::get('/projects/{project}', 'ProjectsController@show');
 
-Auth::routes();
+    Route::get('/home', 'HomeController@index')->name('home');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Auth::routes();
+
+

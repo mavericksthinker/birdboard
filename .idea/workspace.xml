@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="195">
+              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
               <folding>
                 <element signature="e#33#52#0#PHP" expanded="true" />
               </folding>
@@ -351,23 +351,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559879606733</updated>
-      <workItem from="1559879608900" duration="10955000" />
+      <workItem from="1559879608900" duration="11232000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 49m 42s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="UserTest_test_user_has_project - 2019.06.07 at 14h 50m 13s.xml">
-      <configuration name="UserTest.test_user_has_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 50m 17s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectsTest_test_a_user_can_create_project - 2019.06.07 at 14h 50m 33s.xml">
-      <configuration name="ProjectsTest.test_a_user_can_create_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="ProjectTest - 2019.06.07 at 14h 50m 41s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -386,13 +374,24 @@
     <history-entry file="ProjectTest - 2019.06.07 at 15h 17m 48s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="ProjectsTest_test_a_user_can_view_their_project - 2019.06.07 at 15h 20m 13s.xml">
+      <configuration name="ProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectsTest_test_a_user_can_view_their_project - 2019.06.07 at 15h 21m 20s.xml">
+      <configuration name="ProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectsTest_test_a_user_can_view_their_project - 2019.06.07 at 15h 21m 42s.xml">
+      <configuration name="ProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTest - 2019.06.07 at 15h 22m 05s.xml">
+      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10955000" />
+    <option name="totallyTimeSpent" value="11232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24926254" />
@@ -400,11 +399,11 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.4968153" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.4968153" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -533,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectsTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="195">
+          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
           <folding>
             <element signature="e#33#52#0#PHP" expanded="true" />
           </folding>
