@@ -36,9 +36,10 @@ class ProjectsTest extends TestCase
     /**
      * Test to check if the view has the provided parameters
      */
-    public function test_a_user_can_view_a_project(){
+    public function test_a_user_can_view_their_project(){
 
-        $project = factory('App\Project')->create();
+        $this->be(factory('App\User')->create());
+        $project = factory('App\Project')->create(['owner_id' => auth()->id()]);
 
         $this->get($project->path())
             ->assertSee($project->title)
@@ -77,12 +78,29 @@ class ProjectsTest extends TestCase
     }
 
     // Test to see if the post request has a description Passes
-    public function test_only_authenticated_users_can_create_a_projects(){
+    public function test_guest_cannot_create_a_projects(){
 
         $attributes = factory('App\Project')->raw();
 
         // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
         $this->post('/projects',$attributes)->assertRedirect('login');
+
+    }
+
+    // Test to see if the post request has a description Passes
+    public function test_guest_may_not_view_projects(){
+
+        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+        $this->get('/projects')->assertRedirect('login');
+
+    }
+
+    public function test_guest_cannot_view_a_single_project(){
+
+        $project = factory('App\Project')->create();
+
+        // $this->post('/projects',$attributes)->assertSessionHasErrors('owner_id');
+        $this->get($project->path())->assertRedirect('login');
 
     }
 }

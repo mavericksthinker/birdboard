@@ -15,7 +15,7 @@ class ProjectsController extends Controller
     public function index(){
 
         // Get all the project's list form the DB
-        $projects = Project::all();
+        $projects = auth()->user()->projects;
 
         // return a view with all the data (Note : you can pass the projects variable in the view to the page as data as shown
         return view('projects.index',compact('projects'));
@@ -56,6 +56,11 @@ class ProjectsController extends Controller
         // find the particular project based on the id provided obtain from the database
         // Or else if not found it will throw the exception
 //        $project =Project::findOrFail(request('project'));
+
+        // Forbidden to access the projects not related to the owner
+//        if(auth()->id() !== $project->owner_id){
+//            abort(403);
+//        }
 
         // Returns a view with obtained project details
         return view('projects.show',compact('project'));
