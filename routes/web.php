@@ -11,6 +11,13 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::post('/projects', function () {
+
+    App\Project::create(request(['title','description']));
+
 });
