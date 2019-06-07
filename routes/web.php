@@ -11,13 +11,10 @@
 |
 */
 
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/projects', function () {
+Route::post('/projects', 'ProjectsController@store');
 
-    App\Project::create(request(['title','description']));
-
-});
+Route::get('/projects', 'ProjectsController@index');
