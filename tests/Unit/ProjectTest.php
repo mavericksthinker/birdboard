@@ -32,4 +32,18 @@ class ProjectTest extends TestCase
 
 
     }
+
+    public function test_it_can_add_task(){
+
+        $project = factory('App\Project')->create();
+
+        $task = $project->addTask('Test task');
+
+        // To test that the DB at_least returning a single project
+        $this->assertCount(1, $project->tasks);
+
+        // To test that the DB Return the specified project
+        $this->assertTrue($project->tasks->contains($task));
+
+    }
 }

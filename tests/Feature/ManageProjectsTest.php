@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Project;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -16,7 +17,10 @@ class ManageProjectsTest extends TestCase
      */
     public function test_a_user_can_create_project(){
 
-        $this->actingAs(factory('App\User')->create());
+//        $this->actingAs(factory('App\User')->create());
+
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
 
         $this->get('/projects/create')->assertStatus(200);
 
@@ -40,13 +44,20 @@ class ManageProjectsTest extends TestCase
      */
     public function test_a_user_can_view_their_project(){
 
-        $this->be(factory('App\User')->create());
+        // $this->be(factory('App\User')->create());
 
-        $project = factory('App\Project')->create(['owner_id' => auth()->id()]);
+        $this->withoutExceptionHandling();
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
+
+        $project = auth()->user()->projects()->create(
+            factory(Project::class)->raw()
+        );
+        //$project = factory('App\Project')->create(['owner_id' => auth()->id()]);
 
         $this->get($project->path())
             ->assertSee($project->title)
-            ->assertSee($project->description);
+            ->assertSee(str_limit($project->description, 200));
 
     }
 
@@ -55,7 +66,9 @@ class ManageProjectsTest extends TestCase
      */
     public function test_an_authenticated_user_cant_access_the_project_of_others(){
 
-        $this->be(factory('App\User')->create());
+//        $this->be(factory('App\User')->create());
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
 
         $project = factory('App\Project')->create();
 
@@ -67,7 +80,10 @@ class ManageProjectsTest extends TestCase
     public function test_a_project_require_a_title(){
 
         // Performs the sign_in
-        $this->actingAs(factory('App\User')->create());
+        // $this->actingAs(factory('App\User')->create());
+
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
 
         /**
          * create : This will generate the data and store it in the database
@@ -85,7 +101,10 @@ class ManageProjectsTest extends TestCase
     public function test_a_project_require_a_description(){
 
         // Performs the sign_in
-        $this->actingAs(factory('App\User')->create());
+        // $this->actingAs(factory('App\User')->create());
+
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
 
         $attributes = factory('App\Project')->raw(['description'=>'']);
 
