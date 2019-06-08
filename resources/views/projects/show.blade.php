@@ -1,18 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BirdBoard</title>
-</head>
-<body>
-<h1>BirdBoard</h1>
-<ul>
+@extends('layouts.app')
+
+@section('content')
+
     <h1>{{$project->title}}</h1>
     <div>{{$project->description}}</div>
-</ul>
-
-</body>
-</html>
+    <a href="/projects" style="padding-left: 10px;">Go Back</a>
+@endsection
