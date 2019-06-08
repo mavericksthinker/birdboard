@@ -7559,6 +7559,16 @@ video {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.button {
+  background-color: #47cdff;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 2px 7px 0 #b0eaff;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  padding: 0.5rem 1.25rem;
+}
+
 @media (min-width: 640px) {
   .sm\:appearance-none {
     -webkit-appearance: none;
