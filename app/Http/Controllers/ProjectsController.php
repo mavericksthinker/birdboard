@@ -46,13 +46,14 @@ class ProjectsController extends Controller
         //Project::create(request(['title','description'])
         //$attributes['owner_id'] = Auth()->id();
 
-        auth()->user()->projects()->create($attributes);
+        $project = auth()->user()->projects()->create($attributes);
 
         //Project::create($attributes);
 
         // then it will redirect to the projects with a get request to obtain all the list of the project
-        return redirect('/projects');
+        // return redirect('/projects');
 
+        return redirect($project->path());
     }
 
     /**
