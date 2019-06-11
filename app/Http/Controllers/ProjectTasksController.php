@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Task;
 use Illuminate\Http\Request;
 
 class ProjectTasksController extends Controller
@@ -20,5 +21,24 @@ class ProjectTasksController extends Controller
         $project->addTask(request('body'));
 
         return redirect($project->path());
+    }
+
+    public function update(Project $project,Task $task){
+
+        if(auth()->user()->isNot($project->owner)){
+            abort(403);
+        }
+
+        request()->validate([
+            'body'=>'required'
+        ]);
+
+        $task->update([
+            'body' => request('body'),
+            'completed' => request()->has('completed') // In case of single checkbox, When user want to complete a task the request will have the param named in the checkbox, so doing this will work
+        ]);
+
+        return redirect($project->path());
+
     }
 }

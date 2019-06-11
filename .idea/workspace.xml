@@ -4,7 +4,11 @@
     <list default="true" id="66f10b28-793b-4679-afd1-0e46be25da4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Task.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/Taskfactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/Taskfactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,23 +22,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/projects/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="247">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
-                <element signature="e#976#1001#0#HTML" expanded="true" />
+                <element signature="e#1773#1798#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="-89">
+              <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
               <folding>
                 <element signature="e#33#49#0#PHP" expanded="true" />
               </folding>
@@ -43,10 +47,58 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/Unit/TaskTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+              <folding>
+                <element signature="e#30#46#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/factories/Taskfactory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Task.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Project.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
                 <element signature="e#40#56#0#PHP" expanded="true" />
               </folding>
@@ -55,31 +107,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Unit/ProjectTest.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+            <state relative-caret-position="255">
+              <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="63" column="7" lean-forward="true" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-              <folding>
-                <element signature="e#33#49#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/factories/ProjectFactory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="472">
+              <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -95,6 +135,7 @@
       <find>bg-grey-light</find>
       <find>px-2</find>
       <find>a_user</find>
+      <find>t</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +150,6 @@
         <option value="$PROJECT_DIR$/tests/Unit/UserTest.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ProjectsTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/webpack.mix.js" />
         <option value="$PROJECT_DIR$/resources/views/projects/create.blade.php" />
@@ -120,17 +160,19 @@
         <option value="$PROJECT_DIR$/resources/views/projects/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/card.blade.php" />
         <option value="$PROJECT_DIR$/tests/TestCase.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Project.php" />
-        <option value="$PROJECT_DIR$/app/Task.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php" />
         <option value="$PROJECT_DIR$/tests/Unit/ProjectTest.php" />
-        <option value="$PROJECT_DIR$/database/factories/Taskfactory.php" />
         <option value="$PROJECT_DIR$/database/factories/ProjectFactory.php" />
         <option value="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php" />
         <option value="$PROJECT_DIR$/resources/views/projects/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" />
+        <option value="$PROJECT_DIR$/database/factories/Taskfactory.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/TaskTest.php" />
+        <option value="$PROJECT_DIR$/app/Task.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" />
       </list>
     </option>
   </component>
@@ -358,44 +400,44 @@
       <workItem from="1559879608900" duration="16325000" />
       <workItem from="1559964693076" duration="6160000" />
       <workItem from="1559978412179" duration="247000" />
-      <workItem from="1559978692926" duration="13513000" />
+      <workItem from="1559978692926" duration="20051000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageProjectsTest_test_a_user_can_view_their_project - 2019.06.08 at 18h 09m 03s.xml">
-      <configuration name="ManageProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ManageProjectsTest_test_a_user_can_view_their_project - 2019.06.08 at 18h 09m 20s.xml">
-      <configuration name="ManageProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ManageProjectsTest_test_a_user_can_view_their_project - 2019.06.08 at 18h 10m 51s.xml">
-      <configuration name="ManageProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.08 at 18h 11m 26s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ManageProjectsTest_test_a_user_can_view_their_project - 2019.06.08 at 18h 12m 53s.xml">
-      <configuration name="ManageProjectsTest.test_a_user_can_view_their_project" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.08 at 18h 13m 00s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTest - 2019.06.08 at 18h 16m 20s.xml">
-      <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTasksTest_test_guest_cant_add_task - 2019.06.08 at 18h 19m 31s.xml">
-      <configuration name="ProjectTasksTest.test_guest_cant_add_task" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="ProjectTasksTest_test_only_owner_of_the_project_can_add_tasks_to_their_projects - 2019.06.08 at 18h 24m 03s.xml">
-      <configuration name="ProjectTasksTest.test_only_owner_of_the_project_can_add_tasks_to_their_projects" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="ProjectTest - 2019.06.08 at 18h 27m 23s.xml">
       <configuration name="ProjectTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="ProjectTasksTest_test_a_task_can_be_updated - 2019.06.11 at 11h 11m 06s.xml">
+      <configuration name="ProjectTasksTest.test_a_task_can_be_updated" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTasksTest_test_a_task_can_be_updated - 2019.06.11 at 11h 13m 33s.xml">
+      <configuration name="ProjectTasksTest.test_a_task_can_be_updated" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTasksTest_test_only_the_owner_of_the_project_can_update_the_task - 2019.06.11 at 15h 25m 18s.xml">
+      <configuration name="ProjectTasksTest.test_only_the_owner_of_the_project_can_update_the_task" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TaskTest_test_a_task_has_a_project - 2019.06.11 at 15h 36m 51s.xml">
+      <configuration name="TaskTest.test_a_task_has_a_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TaskTest_test_a_task_has_a_project - 2019.06.11 at 15h 37m 12s.xml">
+      <configuration name="TaskTest.test_a_task_has_a_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTasksTest_test_only_the_owner_of_the_project_can_update_the_task - 2019.06.11 at 15h 38m 52s.xml">
+      <configuration name="ProjectTasksTest.test_only_the_owner_of_the_project_can_update_the_task" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="TaskTest_test_it_has_a_path - 2019.06.11 at 15h 38m 59s.xml">
+      <configuration name="TaskTest.test_it_has_a_path" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTasksTest_test_only_the_owner_of_the_project_can_update_the_task - 2019.06.11 at 15h 39m 42s.xml">
+      <configuration name="ProjectTasksTest.test_only_the_owner_of_the_project_can_update_the_task" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ProjectTasksTest_test_a_task_can_be_updated - 2019.06.11 at 15h 39m 59s.xml">
+      <configuration name="ProjectTasksTest.test_a_task_can_be_updated" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36245000" />
+    <option name="totallyTimeSpent" value="42783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
@@ -408,14 +450,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49557522" visible="true" weight="0.19235669" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49557522" weight="0.19235669" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50442475" side_tool="true" weight="0.19235669" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -460,29 +502,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Unit/UserTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
           <folding>
             <element signature="e#30#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,37 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
-          <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Task.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/View/View.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -616,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/Taskfactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -643,32 +630,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="132">
+          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
           <folding>
             <element signature="e#40#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#33#49#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="472">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_08_104455_create_tasks_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/projects/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="247">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
-            <element signature="e#976#1001#0#HTML" expanded="true" />
+            <element signature="e#1773#1798#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/Taskfactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Task.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Unit/TaskTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <folding>
+            <element signature="e#30#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="82" column="34" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+          <folding>
+            <element signature="e#33#49#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

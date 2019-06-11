@@ -69,4 +69,41 @@ class ProjectTasksTest extends TestCase
         $this->post($project->path().'/tasks', $attributes)->assertSessionHasErrors('body');
 
     }
+
+    function test_a_task_can_be_updated(){
+
+        $this->signIn();
+
+        $project = auth()->user()->projects()->create(
+            factory(Project::class)->raw()
+        );
+
+        $task = $project->addTask(' test task');
+
+        $this->patch($task->path(), [
+            'body' => 'changed',
+            'completed' => true
+        ]);
+
+        $this->assertDatabaseHas('tasks',[
+            'body' => 'changed',
+            'completed' => true
+        ]);
+
+    }
+
+    function test_only_the_owner_of_the_project_can_update_the_task(){
+
+        $this->signIn();
+
+        $project = factory('App\Project')->create();
+
+        $task = $project->addTask('Test_task');
+
+        $this->patch($task->path(),['body' => 'changed'])
+              ->assertStatus(403);
+
+        $this->assertDatabaseMissing('tasks',['body' => 'changed']);
+
+    }
 }

@@ -29,7 +29,26 @@
                     {{-- Tasks --}}
                     @foreach($project->tasks as $task)
 
-                        <div class="card mb-3">{{ $task->body }}</div>
+                        <div class="card mb-3">
+
+                            <form method="POST" action="{{ $task->path() }}">
+
+                                {{-- Patch request --}}
+                                @method('PATCH')
+
+                                @csrf
+
+                                <label class="flex">
+
+                                    <input name="body" value="{{ $task->body }}" class="w-full {{$task->completed ? 'grey':''}}">
+
+                                    <input name="completed" type="checkbox" onchange="this.form.submit()" {{$task->completed? 'checked':''}}>
+
+                                </label>
+
+                            </form>
+
+                        </div>
 
                     @endforeach
 

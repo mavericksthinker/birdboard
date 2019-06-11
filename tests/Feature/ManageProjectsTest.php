@@ -30,7 +30,9 @@ class ManageProjectsTest extends TestCase
         ];
 
         // Stores the project into the DB ( creates a table) Passes
-        $this->post('/projects',$attributes)->assertRedirect('/projects');
+        $response = $this->post('/projects',$attributes);
+
+        $response->assertRedirect(Project::where($attributes)->first()->path());
 
         // Checks if the DB has table projects Passes
         $this->assertDatabaseHas('projects',$attributes);
