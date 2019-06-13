@@ -26,19 +26,43 @@ class ManageProjectsTest extends TestCase
 
         $attributes = [
             'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph
+            'description' => $this->faker->sentence,
+            'notes' => 'General Notes Here'
         ];
 
         // Stores the project into the DB ( creates a table) Passes
         $response = $this->post('/projects',$attributes);
 
-        $response->assertRedirect(Project::where($attributes)->first()->path());
+        $project = Project::where($attributes)->first();
+
+        $response->assertRedirect($project->path());
 
         // Checks if the DB has table projects Passes
         $this->assertDatabaseHas('projects',$attributes);
 
         // Obtains all the projects from the DB Passes
-        $this->get('/projects')->assertSee($attributes['title']);
+        //$this->get('/projects')->assertSee($attributes['title']);
+
+        $this->get($project->path())
+            ->assertSee($attributes['title'])
+            ->assertSee($attributes['description'])
+            ->assertSee($attributes['notes']);
+    }
+
+    function test_a_user_can_update_a_project(){
+
+        $this->signIn();
+
+//        $this->withoutExceptionHandling();
+
+        $project = factory('App\Project')->create(['owner_id' => auth()->id()]);
+
+        $this->patch($project->path(), [
+            'notes' => 'Changed'
+        ])->assertRedirect($project->path());
+
+        $this->assertDatabaseHas('projects',['notes' => 'Changed']);
+
     }
 
     /**
@@ -48,7 +72,7 @@ class ManageProjectsTest extends TestCase
 
         // $this->be(factory('App\User')->create());
 
-        $this->withoutExceptionHandling();
+//        $this->withoutExceptionHandling();
         // Helper functions included from the TestCase.php to avoid repetition of code
         $this->signIn();
 
@@ -66,7 +90,7 @@ class ManageProjectsTest extends TestCase
     /**
      * An authenticated user cant view the projects of others
      */
-    public function test_an_authenticated_user_cant_access_the_project_of_others(){
+    public function test_an_authenticated_user_cant_view_the_project_of_others(){
 
 //        $this->be(factory('App\User')->create());
         // Helper functions included from the TestCase.php to avoid repetition of code
@@ -75,6 +99,18 @@ class ManageProjectsTest extends TestCase
         $project = factory('App\Project')->create();
 
         $this->get($project->path())->assertStatus(403);
+
+    }
+
+    public function test_an_authenticated_user_cant_update_the_project_of_others(){
+
+//        $this->be(factory('App\User')->create());
+        // Helper functions included from the TestCase.php to avoid repetition of code
+        $this->signIn();
+
+        $project = factory('App\Project')->create();
+
+        $this->patch($project->path(),[])->assertStatus(403);
 
     }
 

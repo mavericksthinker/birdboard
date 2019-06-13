@@ -72,6 +72,7 @@ class ProjectTasksTest extends TestCase
 
     function test_a_task_can_be_updated(){
 
+        $this->withoutExceptionHandling();
         $this->signIn();
 
         $project = auth()->user()->projects()->create(

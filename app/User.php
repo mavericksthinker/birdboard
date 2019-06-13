@@ -40,7 +40,11 @@ class User extends Authenticatable
     public function projects(){
 
         // As it will look for user_id as default in the projects table so we have to overwrite it to owner_id as we set
-        return $this->hasMany(Project::class,'owner_id');
+        // return $this->hasMany(Project::class,'owner_id')->orderBy('updated_at','desc');
+        // Or
+        // return $this->hasMany(Project::class,'owner_id')->orderByDesc('updated_at');
+        // Or latest is default to created_at column in desc order and latest is default to created_at column in asc order
+         return $this->hasMany(Project::class,'owner_id')->latest('updated_at');
 
     }
 }

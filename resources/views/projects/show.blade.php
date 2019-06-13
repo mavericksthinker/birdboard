@@ -38,11 +38,11 @@
 
                                 @csrf
 
-                                <label class="flex">
+                                <label class="flex" onchange="this.form.submit()">
 
                                     <input name="body" value="{{ $task->body }}" class="w-full {{$task->completed ? 'grey':''}}">
 
-                                    <input name="completed" type="checkbox" onchange="this.form.submit()" {{$task->completed? 'checked':''}}>
+                                    <input name="completed" type="checkbox" {{$task->completed? 'checked':''}}>
 
                                 </label>
 
@@ -72,7 +72,23 @@
 
                  {{-- General Notes --}}
 
-                    <textarea class="card w-full" style="min-height: 200px">General</textarea>
+                    <form method="POST" action = "{{ $project->path() }}">
+                        @csrf
+                        @method('PATCH')
+                        <label>
+
+                            <textarea
+                                name="notes"
+                                class="card w-full mb-4"
+                                style="min-height: 200px"
+                                placeholder="Anything special that you want to make a note of ?"
+                            >{{ $project->notes }}</textarea>
+
+                            <button type="submit" class="button ">Save</button>
+
+                        </label>
+
+                    </form>
 
                 </div>
 
