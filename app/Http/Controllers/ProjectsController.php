@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateProjectRequest;
 use App\Project;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
@@ -117,6 +118,29 @@ class ProjectsController extends Controller
 
         return redirect($project->path());
     }
+
+       // Or
+
+       // Via a validation request
+//       public function update(UpdateProjectRequest $request,Project $project){
+//
+//        // $project->update($request->validated());
+//        // Or
+//           $request->save();
+//
+//        // If you dont want to pass the Project as route model binding then you have to manually search for the project
+//        // return redirect($request->project()->path());
+//
+//        return redirect($project->path());
+//
+//       }
+
+//    // Via a validation request but if we dont want to include Project $project via route model binding
+//    public function update(UpdateProjectRequest $form){
+//
+//        return redirect($form->save()->path());
+//
+//    }
 
     /**
      * Validate the request attributes
