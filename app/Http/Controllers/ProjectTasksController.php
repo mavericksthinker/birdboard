@@ -35,19 +35,22 @@ class ProjectTasksController extends Controller
         // Or
         $this->authorize('update', $project);
 
-        request()->validate([
-            'body'=>'required'
-        ]);
+//         $attributes = request()->validate([
+//            'body'=>'required'
+//        ]);
 
-        $task->update([
-            'body' => request('body'),
-            'completed' => request()->has('completed') // In case of single checkbox, When user want to complete a task the request will have the param named in the checkbox, so doing this will work
-        ]);
+//        $task->update([
+//            'body' => request('body'),
+//            'completed' => request()->has('completed') // In case of single checkbox, When user want to complete a task the request will have the param named in the checkbox, so doing this will work
+//        ]);
+
+        $task->update(request()->validate(['body'=>'required']));
 
         $task->update(['body' => request('body')]);
 
-        if(request()->has('completed'))
-            $task->complete();
+        $method = request('completed')?'complete':'incomplete';
+
+        $task->$method();
 
         return redirect($project->path());
 

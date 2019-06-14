@@ -33,15 +33,18 @@ class Project extends Model
     }
 
     /**
-     * @param $project
-     * @param $type
+     * @param $description
      */
-    public function recordActivity($type){
+    public function recordActivity($description){
 
-        Activity::create([
-            'project_id' => $this->id,
-            'description' => $type
-        ]);
+        //$this->activity()->create(['description' => $description]);
+        // Is same as
+        $this->activity()->create(compact('description'));
+        // As we already has a relationship
+//        Activity::create([
+//            'project_id' => $this->id,
+//            'description' => $type
+//        ]);
 
     }
 
