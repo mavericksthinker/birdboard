@@ -44,6 +44,11 @@ class ProjectTasksController extends Controller
             'completed' => request()->has('completed') // In case of single checkbox, When user want to complete a task the request will have the param named in the checkbox, so doing this will work
         ]);
 
+        $task->update(['body' => request('body')]);
+
+        if(request()->has('completed'))
+            $task->complete();
+
         return redirect($project->path());
 
     }

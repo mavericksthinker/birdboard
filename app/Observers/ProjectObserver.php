@@ -2,7 +2,6 @@
 
 namespace App\Observers;
 
-use App\Activity;
 use App\Project;
 
 class ProjectObserver
@@ -16,7 +15,7 @@ class ProjectObserver
     public function created(Project $project)
     {
         // Creates an activity when the project is created
-        $this->recordActivity($project,'created');
+        $project->recordActivity('created');
 
     }
 
@@ -29,21 +28,9 @@ class ProjectObserver
     public function updated(Project $project)
     {
         // Creates an activity when the project is updated
-        $this->recordActivity($project,'updated');
+        $project->recordActivity('updated');
     }
 
-    /**
-     * @param $project
-     * @param $type
-     */
-    protected function recordActivity($project,$type){
-
-        Activity::create([
-            'project_id' => $project->id,
-            'description' => $type
-        ]);
-
-    }
 
     /**
      * Handle the project "deleted" event.
