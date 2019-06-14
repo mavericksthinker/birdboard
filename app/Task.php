@@ -16,16 +16,24 @@ class Task extends Model
         'completed' => 'boolean'
     ];
 
-    protected static function boot(){
-
-        parent::boot();
+// Another way beside using observers
+//    Overriding the boot method
+//    protected static function boot(){
+//
+//        parent::boot();
 
         // Can be done via observer
-        static::created(function($task){
-
-            $task->project->recordActivity('created_task');
-
-        });
+//        static::created(function($task){
+//
+//            $task->project->recordActivity('created_task');
+//
+//        });
+//
+//        static::deleted(function($task){
+//
+//            $task->project->recordActivity('deleted_task');
+//
+//        });
 
         // Been taken care of in complete()
 //        static::updated(function($task){
@@ -34,7 +42,7 @@ class Task extends Model
 //
 //            $task->project->recordActivity('completed_task');
 //        });
-    }
+//    }
 
     public function project(){
 
@@ -60,7 +68,7 @@ class Task extends Model
 
         $this->update(['completed' => false]);
 
-        //$this->project->recordActivity('task_marked_incomplete');
+        $this->project->recordActivity('incompleted_task');
 
     }
 }
