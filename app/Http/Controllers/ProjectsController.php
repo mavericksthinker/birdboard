@@ -41,16 +41,16 @@ class ProjectsController extends Controller
     public function store(){
 
         // Validate the request parameters if it exists (can be done the way you require)
-        $attributes = request()->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'notes' => 'min:3'
-        ]);
+//        $attributes = request()->validate([
+//            'title' => 'required',
+//            'description' => 'required',
+//            'notes' => 'min:3'
+//        ]);
         // Creates a project with a post request to projects
         //Project::create(request(['title','description'])
         //$attributes['owner_id'] = Auth()->id();
 
-        $project = auth()->user()->projects()->create($attributes);
+        $project = auth()->user()->projects()->create($this->validateRequest());
 
         //Project::create($attributes);
 
@@ -95,11 +95,11 @@ class ProjectsController extends Controller
 
         $this->authorize('update', $project);
 
-        $attributes = request()->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'notes' => 'min:3'
-        ]);
+//        $attributes = request()->validate([
+//            'title' => 'sometimes|required',
+//            'description' => 'sometimes|required',
+//            'notes' => 'nullable'
+//        ]);
         // Same as $this->authorize('update', $project); but without policy
 //        if(auth()->user()->isNot($project->owner)){
 //            abort(403);
@@ -110,8 +110,25 @@ class ProjectsController extends Controller
         // ]);
         // Or
         // $project->update(request('notes')); : This will give the value of notes associated with notes wrapping it with [] will return key and value( i.e notes => value ) associated with the notes
-        $project->update($attributes);
+//        $project->update($attributes);
+
+        // Making the validation reusable
+        $project->update($this->validateRequest());
 
         return redirect($project->path());
     }
+
+    /**
+     * Validate the request attributes
+     */
+    protected function validateRequest(){
+
+        return request()->validate([
+            'title' => 'sometimes|required',
+            'description' => 'sometimes|required',
+            'notes' => 'nullable'
+        ]);
+
+    }
+
 }
