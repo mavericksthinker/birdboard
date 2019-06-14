@@ -85,10 +85,21 @@ class ProjectsController extends Controller
 
     }
 
+    public function edit(Project $project){
+
+        return view('projects.edit',compact('project'));
+
+    }
+
     public function update(Project $project){
 
         $this->authorize('update', $project);
 
+        $attributes = request()->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'notes' => 'min:3'
+        ]);
         // Same as $this->authorize('update', $project); but without policy
 //        if(auth()->user()->isNot($project->owner)){
 //            abort(403);
@@ -99,7 +110,7 @@ class ProjectsController extends Controller
         // ]);
         // Or
         // $project->update(request('notes')); : This will give the value of notes associated with notes wrapping it with [] will return key and value( i.e notes => value ) associated with the notes
-        $project->update(request(['notes']));
+        $project->update($attributes);
 
         return redirect($project->path());
     }
